@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Custom Pop Up View-->
+        <scene sceneID="AUD-5S-6Lg">
+            <objects>
+                <viewController storyboardIdentifier="AlertPopupVC" id="L9k-32-Gg9" customClass="CustomPopUpView" customModule="SingleView_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CO7-aY-51S">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgH-pN-flj" userLabel="bgbtn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="onbgbtnclicked:" destination="L9k-32-Gg9" eventType="touchUpInside" id="GWA-7v-MXx"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P3z-aT-7q2" userLabel="ContentView">
+                                <rect key="frame" x="82" y="298" width="250" height="300"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Test" translatesAutoresizingMaskIntoConstraints="NO" id="xea-fi-2ne">
+                                        <rect key="frame" x="65" y="20" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="cj8-3u-iR3"/>
+                                            <constraint firstAttribute="width" constant="120" id="mCk-Rc-bgg"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕하세요!신지훈 입니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3W-l7-ybd">
+                                        <rect key="frame" x="37" y="148" width="176" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="테스트테스트테스트테스트!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dO5-av-JOF">
+                                        <rect key="frame" x="34" y="177" width="182" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="xea-fi-2ne" firstAttribute="centerX" secondItem="P3z-aT-7q2" secondAttribute="centerX" id="57j-Pp-1Rh"/>
+                                    <constraint firstAttribute="width" constant="250" id="EBu-Ms-gqS"/>
+                                    <constraint firstAttribute="height" constant="300" id="Gn4-b3-bgp"/>
+                                    <constraint firstItem="a3W-l7-ybd" firstAttribute="centerX" secondItem="dO5-av-JOF" secondAttribute="centerX" id="J4N-hP-VUf"/>
+                                    <constraint firstItem="dO5-av-JOF" firstAttribute="centerX" secondItem="P3z-aT-7q2" secondAttribute="centerX" id="Jig-xc-YlJ"/>
+                                    <constraint firstItem="a3W-l7-ybd" firstAttribute="top" secondItem="xea-fi-2ne" secondAttribute="bottom" constant="8" id="KaQ-cK-OFP"/>
+                                    <constraint firstItem="xea-fi-2ne" firstAttribute="top" secondItem="P3z-aT-7q2" secondAttribute="top" constant="20" id="NMo-b5-bAg"/>
+                                    <constraint firstItem="dO5-av-JOF" firstAttribute="top" secondItem="a3W-l7-ybd" secondAttribute="bottom" constant="8" id="gcw-Qc-2dC"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZa-Dy-2id">
+                                <rect key="frame" x="147" y="530" width="120" height="30"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="cZp-xi-R4m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="테스트테스트">
+                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSubscriptClicked:" destination="L9k-32-Gg9" eventType="touchUpInside" id="b1d-hw-sFk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Qqe-Ha-Ef2"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.61325467687074831" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="CgH-pN-flj" firstAttribute="leading" secondItem="Qqe-Ha-Ef2" secondAttribute="leading" id="5oV-Yf-54M"/>
+                            <constraint firstItem="lZa-Dy-2id" firstAttribute="centerX" secondItem="CO7-aY-51S" secondAttribute="centerX" id="7bA-vc-3LV"/>
+                            <constraint firstItem="CgH-pN-flj" firstAttribute="bottom" secondItem="Qqe-Ha-Ef2" secondAttribute="bottom" id="DXD-ZO-Bg5"/>
+                            <constraint firstItem="CgH-pN-flj" firstAttribute="trailing" secondItem="Qqe-Ha-Ef2" secondAttribute="trailing" id="IHc-C5-A5Q"/>
+                            <constraint firstItem="P3z-aT-7q2" firstAttribute="centerX" secondItem="CO7-aY-51S" secondAttribute="centerX" id="OKd-2x-zLw"/>
+                            <constraint firstItem="CgH-pN-flj" firstAttribute="top" secondItem="CO7-aY-51S" secondAttribute="top" id="QJe-8Z-3VO"/>
+                            <constraint firstItem="P3z-aT-7q2" firstAttribute="centerY" secondItem="CO7-aY-51S" secondAttribute="centerY" id="jPq-A7-wWU"/>
+                            <constraint firstItem="P3z-aT-7q2" firstAttribute="bottom" secondItem="lZa-Dy-2id" secondAttribute="bottom" constant="38" id="zS6-op-eVp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bgbtn" destination="CgH-pN-flj" id="eyh-aN-wpU"/>
+                        <outlet property="contentView" destination="P3z-aT-7q2" id="6Kk-ro-Tnm"/>
+                        <outlet property="subscriptbtc" destination="lZa-Dy-2id" id="8Xy-2v-p8b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="br1-cQ-iXX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-27.536231884057973" y="62.946428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Test" width="112.5" height="112.5"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
