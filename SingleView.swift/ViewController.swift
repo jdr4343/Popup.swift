@@ -32,8 +32,9 @@ class ViewController: UIViewController {
         
         customPopupVC.subscribeBtnCompletionClosseure = {
             print("컴플레션 블럭이 호출되었다.")
-            let myChannelUrl = URL(string:"https://www.youtube.com/?app=desktop&gl=UG&hl=ko&client=y")
+            let myChannelUrl = URL(string:"https://www.notion.so/9efbaec014d84700a6e17733ad829447?v=cb2389fba533469086f9798c5b23a75f")
             self.MyWep.load(URLRequest(url: myChannelUrl!))
+            dismiss(animated: true, completion: oncreatepopupBtncliked())
         }
         
         self.present(customPopupVC, animated: true, completion: nil)
